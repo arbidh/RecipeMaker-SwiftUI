@@ -1,8 +1,7 @@
 # Project Summary
 
 ## Overview
-This project includes a video showcasing the app’s highlights and features, along with an overview diagram.
-Images included below video included in the project
+A SwiftUI recipe app showing async/await networking, an actor-based image cache, SwiftData persistence, and dependency-injected, testable view models
 
 ## Overall Flow
 The architecture ensures **scalability**, **testability**, and **efficient resource management**.
@@ -26,7 +25,7 @@ The architecture ensures **scalability**, **testability**, and **efficient resou
 ### **Scroll to Top** Functionality
 Implemented using `ScrollViewReader` and a custom `ScrollToTopButton`. I used `GeometryReader` to detect how far the user has scrolled to show and hide the button.
 
-### **Snackbar Notifications**
+### **Toast Notifications**
 `SnackbarViewPresenter` displays a `SnackbarView` when a recipe is favorited and saves it to `FavoritesViewModel`. The results are shown in `RecipeFavoritesView`, where a binding exists between `FavoritesViewModel` and `FavoritesView`.
 
 ### **Recipe List & Navigation**
@@ -80,10 +79,12 @@ I prioritized the following aspects in the `RecipeListView`:
 - **Pagination**:
   - Considered adding pagination, but data was limited, and there was no support for limit/offset from the API. Pagination could be easily added by checking the next `RecipeResult` and loading more data.
 
-## Weakest Part of the Project
+## Next Steps
 - **UI Improvements**: The button styling and overall aesthetics could be enhanced.
 - **Test Coverage**: Additional test coverage is needed for further reliability.
 - **Animations**: Animations could be refined for a smoother user experience.
+- "Migrate to @Observable, expand test coverage, refine animations." 
+
 
 ## Additional Information
 - Created **unit tests** for API, `DataService`, and ViewModels.
